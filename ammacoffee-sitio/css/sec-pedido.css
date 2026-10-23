@@ -1,0 +1,9 @@
+/* ════════════════════════════════════════
+   CAPA 9 · SECCIONES: pedido por WhatsApp y pie de página
+   ════════════════════════════════════════ */
+
+.q{display:flex;align-items:center;gap:16px;margin:8px 0 20px}
+.q button{width:42px;height:42px;border-radius:50%;border:1px solid var(--ink);background:none;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.q span{font:700 1.8rem 'Cormorant Garamond',serif;min-width:34px;text-align:center}
+.order .btn{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+footer{padding:40px 0;text-align:center;font-size:.82rem;color:var(--muted)}

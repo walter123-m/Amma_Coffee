@@ -1,0 +1,16 @@
+/* ════════════════════════════════════════
+   CAPA 2 · BASE (reset, tipografía, contenedor, animación de aparición)
+   ✏️ Fuentes: se cargan desde Google Fonts en index.html (Cormorant Garamond y Montserrat).
+   ════════════════════════════════════════ */
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;margin:0;line-height:1.05}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+section{padding:84px 0;position:relative}
+.eyebrow{letter-spacing:.3em;font-size:.72rem;text-transform:uppercase;color:var(--accent);font-weight:600}
+h2{font-size:clamp(2.1rem,5.5vw,3.3rem);margin:10px 0 18px}
+.muted{color:var(--muted)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}

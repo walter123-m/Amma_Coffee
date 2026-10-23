@@ -1,0 +1,26 @@
+/* ════════════════════════════════════════
+   CAPA 5 · PORTADA (hero)
+   ✏️ Colores del fondo: busca .hero{background:...}. Logo grande: .seal-logo.
+   ════════════════════════════════════════ */
+
+.hero{min-height:100vh;min-height:100svh;background:radial-gradient(ellipse at 50% 25%,#69a35f 0%,#437a4c 55%,#2b5037 100%);color:#f6ecd9;text-align:center;display:flex;align-items:center;overflow:hidden;position:relative;padding:110px 0 160px}
+.hero .wrap{position:relative;z-index:3}
+.bean{position:absolute;z-index:1;opacity:.5;animation:float linear infinite}
+@keyframes float{0%{transform:translateY(105vh) rotate(0)}100%{transform:translateY(-15vh) rotate(360deg)}}
+.seal{width:250px;height:250px;border-radius:50%;border:2px solid #f5c76a;margin:0 auto 24px;display:grid;place-items:center;position:relative;animation:spin 40s linear infinite}
+.seal::after{content:"";position:absolute;inset:8px;border-radius:50%;border:1px dashed #f5c76a;opacity:.7}
+.seal span{font-family:'Cormorant Garamond',Georgia,serif;font-size:4.6rem;font-weight:700;color:#f5c76a;animation:spin 40s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(3rem,11vw,6.4rem);letter-spacing:.14em;font-weight:700;background:linear-gradient(90deg,#f5c76a,#fff2cc,#f5c76a);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.loc{letter-spacing:.28em;font-size:.78rem;display:block;margin:8px 0 14px;color:#f5c76a}
+.hero p.sub{max-width:560px;margin:0 auto 30px;font-size:1.05rem;opacity:.9;min-height:3.4em}
+.caret{display:inline-block;width:2px;height:1em;background:#f5c76a;margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.mtn{position:absolute;left:0;right:0;bottom:-2px;z-index:2;width:100%;height:auto;display:block}
+.scroll{position:absolute;bottom:90px;left:50%;z-index:4;width:22px;height:36px;border:2px solid #f5c76a;border-radius:12px;transform:translateX(-50%)}
+.scroll::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:7px;margin-left:-1.5px;background:#f5c76a;border-radius:2px;animation:dot 1.6s infinite}
+@keyframes dot{0%{opacity:1}100%{transform:translateY(14px);opacity:0}}
+/* ✏️ LOGO grande en la portada: reemplaza el sello con la M si existe assets/logo/logo.png */
+.seal-logo{display:none;width:220px;height:220px;object-fit:contain;border-radius:100%;animation:spin 40s linear infinite reverse}
+.seal.has-logo span{display:none}

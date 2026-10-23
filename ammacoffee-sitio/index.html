@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="✏️ AMMA COFFEE · Café de origen cultivado en Cocochó, Amazonas, Perú.">
+<!-- ✏️ FAVICON: coloca tu icono en assets/icons/favicon.png -->
+<link rel="icon" href="assets/images/logo.png">
+<title>AMMA COFFEE S.A.C.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- ✏️ CSS por capas: el orden importa (variables → base → componentes → secciones → responsive) -->
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/sec-producto.css">
+<link rel="stylesheet" href="css/sec-historia.css">
+<link rel="stylesheet" href="css/sec-preparacion.css">  
+<link rel="stylesheet" href="css/sec-pedido.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<nav id="nav"><div class="wrap"><!-- ✏️ LOGO: guarda tu logo en assets/logo/logo.png (fondo transparente). Si lo pones, aparece solo.
+             Si el logo ya incluye el nombre, borra el <span>AMMA COFFEE</span>. -->
+<a class="brand" href="#top"><img class="logo" src="assets/images/logo.png" alt="Logo AMMA COFFEE" onload="this.classList.add('ok')" onerror="this.remove()"><span>AMMA COFFEE S.A.C.</span></a><div><a class="l" href="#cafe">El café</a><a class="l" href="#historia">Historia</a><a class="l" href="#preparacion">Preparación</a><a class="l" href="#pedido">Pedido</a></div></div></nav>
+
+<!-- ═══════════ PORTADA ═══════════
+     ✏️ Cambia el título, el subtítulo (config.js › heroText) y los botones. -->
+<header class="hero" id="top">
+  <div id="beans"></div>
+  <div class="wrap">
+    <!-- ✏️ LOGO GRANDE: usa el mismo assets/logo/logo.png. Mientras no exista se ve el sello con la "M". -->
+    <div class="seal"><img class="seal-logo" src="assets/images/logo.png" alt="Logo AMMA COFFEE" onload="this.style.display='block';this.parentNode.classList.add('has-logo')" onerror="this.remove()"><span aria-hidden="true">M</span></div>
+    <h1>AMMA COFFEE</h1>
+    <span class="loc">COCOCHÓ · AMAZONAS · PERÚ</span>
+    <p class="sub"><span id="type"></span><span class="caret"></span></p>
+    <div class="btns c"><a class="btn solid" href="#pedido">Haz tu pedido</a><a class="btn" href="#historia">Nuestra historia</a></div>
+  </div>
+  <div class="scroll" aria-hidden="true"></div>
+  <svg class="mtn" viewBox="0 0 1200 160" preserveAspectRatio="none" aria-hidden="true"><path id="m1" fill="#2b5037" d="M0 110 L150 50 L260 95 L400 30 L540 100 L680 45 L820 105 L960 40 L1100 95 L1200 60 V160 H0Z"/><path fill="var(--bg)" d="M0 140 L200 95 L360 130 L560 90 L760 135 L960 100 L1200 135 V160 H0Z"/></svg>
+</header>
+
+<!-- ═══════════ CINTA ═══════════
+     ✏️ Las palabras se editan en js/config.js › marquee. -->
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<!-- ═══════════ CIFRAS ═══════════
+     ✏️ Año de inicio y altitud. Puedes agregar una cuarta cifra (ej. familias productoras, hectáreas). -->
+<section id="cafe">
+  <div class="wrap">
+    <div class="stats rv">
+      <div class="stat"><small>Cultivando desde</small><strong data-n="1980" data-plain="1">0</strong></div>
+      <div class="stat"><small>Años de tradición</small><strong data-n="YEARS">0</strong></div>
+      <div class="stat"><small>Altitud · m.s.n.m.</small><strong data-n="1800" data-plain="1">0</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EL CAFÉ · BOLSA Y NOTAS ═══════════
+     ✏️ Cambia aquí las notas de sabor (emoji, título, texto). Para otras presentaciones agrega un botón en .seg. -->
+<section style="padding-top:20px">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Café de origen · Tostado medio</div>
+      <h2>Directo de nuestras chacras a su mesa</h2>
+      <p class="muted">Cada planta crece bajo las mejores prácticas cafetaleras y cada cosecha se selecciona con dedicación, para una taza limpia, aromática y de gran cuerpo.</p>
+      <div class="seg" id="pres"><button class="on" data-v="Molido">Molido</button><button data-v="Grano">Grano</button></div>
+      <p class="muted" style="margin:0;font-size:.85rem">Mueve el cursor sobre la bolsa.</p>
+    </div>
+    <div class="rv">
+      <div class="bag" id="bag"><img class="bag-logo" src="assets/images/logo.png" alt="Logo AMMACOFFEE" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"><div class="m">M</div>
+      <b>AMMA COFFEE</b>
+      <small>COCOCHÓ · AMAZONAS · PERÚ</small><hr>
+      <div>Medio · 1800 m.s.n.m.</div><div>Chocolate, miel y cítrico</div><hr>
+      <div class="w">250G</div><span class="t" id="bagt">Molido</span></div></div>
+  </div>
+  <div class="wrap">
+    <div class="notes">
+      <div class="note rv"><i>🍫</i><h3>Chocolate</h3><p class="muted">Dulzor profundo y envolvente.</p></div>
+      <div class="note rv"><i>🍯</i><h3>Miel</h3><p class="muted">Notas suaves y redondas.</p></div>
+      <div class="note rv"><i>🍋</i><h3>Cítrico</h3><p class="muted">Un toque vivo y fresco.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NUESTRA TIERRA ═══════════
+     ✏️ Foto de fondo: assets/images/valle.jpg (cámbiala por tu foto, mismo nombre). Galería: atardecer.jpg y cosecha-hijo.jpg. Puedes añadir más <figure class="ph">. -->
+<section class="tierra" style="--img:url(assets/images/valle.jpg);padding:90px 22px">
+  <div class="rv"><div class="eyebrow" style="color:#f5c76a">Nuestra tierra</div><h2>Montañas, nubes y cafetales</h2><p>Entre las montañas de Amazonas, a 1800 m.s.n.m., crece el café que cuida nuestra familia.</p></div>
+</section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="gal">
+    <figure class="ph rv" style="aspect-ratio:16/10"><img src="assets/images/atardecer.jpg" alt="Atardecer sobre las montañas y el pueblo de Cocochó" loading="lazy"><figcaption>Atardecer en nuestras montañas</figcaption></figure>
+    <figure class="ph rv" style="aspect-ratio:4/5"><img src="assets/images/cosecha-hijo.jpg" alt="Cosecha de café maduro a mano" style="object-position:center 30%" loading="lazy"><figcaption>Cosecha selecta, grano por grano</figcaption></figure>
+  </div>
+</div></section>
+
+<!-- ═══════════ HISTORIA ═══════════
+     ✏️ Edita el texto y la línea de tiempo (agrega hitos y años reales de la familia). -->
+<section class="band" id="historia">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Nuestra historia</div>
+      <h2>Más que un café, el legado de una familia</h2>
+      <p class="muted">En Villa Cocochó, región Amazonas, honramos la tierra y el trabajo de cada generación. La caficultura es para nosotros una forma de vida y un compromiso con el desarrollo de nuestra comunidad.</p>
+    </div>
+    <div class="tl rv">
+      <div><h3>1980</h3><p>Sembramos las primeras plantas en Villa Cocochó.</p></div>
+      <div><h3>Generación tras generación</h3><p>Una tradición familiar que honra la tierra.</p></div>
+      <div><h3>Hoy</h3><p>De nuestras chacras a su mesa, taza a taza.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAMILIA ═══════════
+     ✏️ Fotos: patriarca.jpg y cosecha-hijo.jpg. ✏️ Agrega nombres y una frase de cada uno dentro de <h3> y <p>. -->
+<section id="familia">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:640px;margin:0 auto"><div class="eyebrow">Nuestra familia</div><h2>Dos generaciones, una misma pasión</h2><p class="muted">Detrás de cada bolsa hay manos que conocen cada planta y una tradición que pasa de padres a hijos.</p></div>
+    <div class="fam">
+      <div class="pc rv"><figure class="ph"><img src="assets/images/patriarca.jpg" alt="El patriarca de la familia junto a un árbol, entre los cafetales" style="object-position:center 42%" loading="lazy"></figure><div class="role">El patriarca</div><h3>Raíz de nuestra tradición</h3><p>Con su trabajo y su respeto por la tierra comenzó el camino que hoy llega a tu taza.</p></div>
+      <div class="pc rv"><figure class="ph"><img src="assets/images/cosecha-hijo.jpg" alt="Hijo de la familia cosechando café en el cafetal" style="object-position:center 28%" loading="lazy"></figure><div class="role">Continúa el legado</div><h3>La nueva generación</h3><p>Cosecha a mano y cuida cada planta con la misma dedicación, llevando la tradición familiar hacia adelante.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TOSTADO (VIDEO) ═══════════
+     ✏️ Video: assets/video/proceso-tostado.mp4 · póster: assets/images/poster-tostado.jpg. Puedes agregar un segundo video. -->
+<section class="band" id="tostado">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Proceso de tostado</div>
+      <h2>Del grano verde a tu taza</h2>
+      <p class="muted">Tostamos con cuidado hasta un punto medio que resalta el chocolate, la miel y el toque cítrico de nuestro origen.</p>
+    </div>
+    <div class="rv"><div class="vid"><video id="rv" src="assets/video/proceso-tostado.mp4" poster="assets/images/poster-tostado.jpg" muted loop playsinline preload="metadata" aria-label="Proceso de tostado del café"></video><button id="pp" aria-label="Pausar o reproducir">❚❚</button></div></div>
+  </div>
+</section>
+
+<!-- ═══════════ PREPARACIÓN ═══════════
+     ✏️ Gramos y ml se configuran en js/config.js. Los textos de cada método están en js/sec-preparacion.js. -->
+<section id="preparacion">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Preparación recomendada</div>
+      <h2>Calcula tu taza perfecta</h2>
+      <p class="muted">Por cada taza de 240 ml, usa 10 g de café molido. Temperatura de agua ideal: 90–96 °C.</p>
+      <div class="tabs" id="tabs"><button class="on" data-t="Filtro">Filtro</button><button data-t="Cafetera italiana">Cafetera italiana</button><button data-t="Gota a gota">Gota a gota</button></div>
+      <p class="muted" id="tabtxt" style="margin:0">Método sugerido: Filtro. Almacena el café en un lugar fresco y seco.</p>
+    </div>
+    <div class="card rv">
+      <svg class="cup" viewBox="0 0 120 100" aria-hidden="true"><path class="steam" d="M40 28 q-8-10 0-18 q8-8 0-16"/><path class="steam" d="M60 28 q-8-10 0-18 q8-8 0-16"/><path class="steam" d="M80 28 q-8-10 0-18 q8-8 0-16"/><path d="M22 38h76v26a30 30 0 0 1-30 30H52a30 30 0 0 1-30-30z" fill="var(--gold)" stroke="var(--ink)" stroke-width="3"/><path d="M98 46h6a10 10 0 0 1 0 22h-8" fill="none" stroke="var(--ink)" stroke-width="3"/></svg>
+      <label for="cups" class="muted" style="font-size:.85rem">Número de tazas: <b id="cn" style="color:var(--ink)">2</b></label>
+      <input id="cups" type="range" min="1" max="12" value="2">
+      <div class="res"><div><strong id="g">20 g</strong><small class="muted">café molido</small></div><div><strong id="ml">480 ml</strong><small class="muted">agua a 90–96 °C</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ✏️ PLANTILLA OPCIONAL · PRECIOS (quita las marcas de comentario para activarla)
+<section id="precios"><div class="wrap">
+  <div class="eyebrow">Precios</div><h2>Nuestras presentaciones</h2>
+  <div class="stats">
+    <div class="stat"><small>Molido · 250 g</small><strong>S/ 00.00</strong></div>
+    <div class="stat"><small>Grano · 250 g</small><strong>S/ 00.00</strong></div>
+  </div>
+</div></section>
+-->
+
+<!-- ✏️ PLANTILLA OPCIONAL · TESTIMONIOS (quita las marcas de comentario para activarla)
+<section class="band" id="testimonios"><div class="wrap">
+  <div class="eyebrow">Opiniones</div><h2>Lo que dicen de nuestro café</h2>
+  <div class="notes">
+    <div class="note rv"><p>“Escribe aquí el testimonio de un cliente.”</p><h3>Nombre del cliente</h3></div>
+    <div class="note rv"><p>“Otro testimonio.”</p><h3>Nombre</h3></div>
+    <div class="note rv"><p>“Otro testimonio.”</p><h3>Nombre</h3></div>
+  </div>
+</div></section>
+-->
+
+<!-- ═══════════ PEDIDO ═══════════
+     ✏️ El número de WhatsApp está en js/config.js. Aquí editas los datos de la empresa (RUC, dirección, correo). -->
+<section class="band order" id="pedido">
+  <div class="wrap two">
+    <div class="rv">
+      <div class="eyebrow">Pedido</div>
+      <h2>Arma tu pedido y escríbenos</h2>
+      <p class="muted">Elige presentación y cantidad. Te abrimos WhatsApp con el mensaje listo.</p>
+      <p class="muted" style="font-size:.88rem;margin:0">Producido y envasado por AMMA COFFEE SAC · RUC 21613440977<br>Avenida Pizarro N°500, Cocochó, Camporredondo, Luya, Amazonas, Perú.<br>amma.coffee01@gmail.com</p>
+    </div>
+    <div class="card rv">
+      <div class="seg" id="op"><button class="on" data-v="molido">Molido</button><button data-v="en grano">Grano</button></div>
+      <div class="muted" style="font-size:.85rem">Bolsas de 250 g</div>
+      <div class="q"><button id="mn" aria-label="Menos">−</button><span id="qn">1</span><button id="pl" aria-label="Más">+</button></div>
+      <a class="btn" id="wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp · 984 278 898</a>
+    </div>
+  </div>
+</section>
+
+<div id="lb" role="dialog" aria-label="Imagen ampliada"><img alt=""></div>
+<!-- ✏️ PIE DE PÁGINA · agrega aquí redes sociales, por ejemplo:
+     <a href="https://instagram.com/tu_cuenta" target="_blank" rel="noopener">Instagram</a> · <a href="https://facebook.com/tu_pagina" target="_blank" rel="noopener">Facebook</a> -->
+<footer>© 2026 AMMACOFFEE · Hecho con pasión en Cocochó, Amazonas.</footer>
+
+<!-- ✏️ JS por capas: config.js tiene tus datos editables -->
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/marquee.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/sec-producto.js"></script>
+<script src="js/sec-preparacion.js"></script>
+<script src="js/sec-pedido.js"></script>
+<script src="js/media.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* ════════════════════════════════════════
+   CAPA 6 · SECCIONES: cinta, cifras, bolsa 3D y notas de sabor
+   ════════════════════════════════════════ */
+
+.marq{background:#f5c76a;color:#4a2c17;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-weight:700;letter-spacing:.14em}
+.marq div{display:inline-block;animation:mq 28s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px 20px;text-align:center}
+.stat small{display:block;letter-spacing:.25em;font-size:.7rem;color:var(--muted);text-transform:uppercase}
+.stat strong{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:2.5rem;margin-top:6px}
+.bag{background:linear-gradient(160deg,#f9d078,#e8a63a);color:#3a210f;border-radius:24px;padding:34px 24px;text-align:center;max-width:300px;margin:0 auto;box-shadow:0 24px 50px rgba(0,0,0,.3);transform-style:preserve-3d;transition:transform .15s}
+.bag-logo{display:none;width:60%;max-width:170px;height:auto;aspect-ratio:1/1;object-fit:contain;margin:0 auto 10px}
+.bag.has-logo .bag-logo{display:block}
+.bag.has-logo .m,.bag.has-logo b{display:none}
+.bag b{display:block;letter-spacing:.14em;font-size:1.1rem;margin:4px 0 12px}
+.bag hr{border:0;border-top:1px solid rgba(58,33,15,.5);margin:14px 0}
+.bag .w{font-size:2rem;font-weight:700}
+.bag .t{display:inline-block;border:1px solid #3a210f;border-radius:999px;padding:3px 14px;font-size:.8rem;margin-top:6px}
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;text-align:center;transition:transform .3s}
+.note:hover{transform:translateY(-6px) rotate(-1deg)}
+.note i{font-style:normal;font-size:2.2rem;display:block}
+.note h3{font-size:1.6rem;margin-top:6px}

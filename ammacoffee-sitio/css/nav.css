@@ -1,0 +1,16 @@
+/* ════════════════════════════════════════
+   CAPA 4 · BARRA DE NAVEGACIÓN
+   ✏️ Logo: ver .logo al final de este archivo.
+   ════════════════════════════════════════ */
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(12px + env(safe-area-inset-top,0px)) 0 12px;transition:background .3s,box-shadow .3s;color:#f6ecd9}
+nav.s{background:rgba(43,80,55,.94);backdrop-filter:blur(8px);box-shadow:0 4px 20px rgba(0,0,0,.25)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.brand{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:1.35rem;letter-spacing:.14em;text-decoration:none;color:inherit}
+nav a.l{font-size:.82rem;text-decoration:none;color:inherit;margin-left:22px;opacity:.85;position:relative}
+nav a.l::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:#f5c76a;transition:width .25s}
+nav a.l:hover::after{width:100%}
+/* ✏️ LOGO en la barra: se muestra solo si existe assets/logo/logo.png */
+.logo{display:none}
+.logo.ok{display:inline-block;height:38px;width:auto;vertical-align:middle;margin-right:10px}
+.brand{display:inline-flex;align-items:center}

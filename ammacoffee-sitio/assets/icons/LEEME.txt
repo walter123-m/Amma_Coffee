@@ -1,0 +1,1 @@
+Coloca aquí favicon.png (el iconito de la pestaña del navegador), de 64x64 o 128x128 px.

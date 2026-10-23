@@ -1,0 +1,9 @@
+/* ════════════════════════════════════════
+   CAPA 1 · VARIABLES Y TEMAS
+   ✏️ Aquí cambias los colores de toda la página (modo claro y modo oscuro).
+   --bg fondo · --surface tarjetas · --gold detalles · --ink texto · --muted texto suave · --accent títulos pequeños
+   ════════════════════════════════════════ */
+
+:root{--bg:#fff7e8;--surface:#fbeccb;--gold:#e8a63a;--ink:#4a2c17;--muted:#7b5a3d;--accent:#b94a24;--line:rgba(74,44,23,.18);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#26190f;--surface:#35241a;--gold:#f0b955;--ink:#f6e8cf;--muted:#d6b890;--accent:#f08a5d;--line:rgba(246,232,207,.2);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#26190f;--surface:#35241a;--gold:#f0b955;--ink:#f6e8cf;--muted:#d6b890;--accent:#f08a5d;--line:rgba(246,232,207,.2);color-scheme:dark}

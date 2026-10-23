@@ -1,0 +1,7 @@
+/* ════════════════════════════════════════
+   CAPA 10 · RESPONSIVE Y ACCESIBILIDAD (debe cargarse al final)
+   ════════════════════════════════════════ */
+
+@media(max-width:760px){.gal,.fam{grid-template-columns:1fr}.gal{margin-top:-50px}}
+@media(max-width:760px){.two{grid-template-columns:1fr}.notes{grid-template-columns:1fr}nav a.l{display:none}section{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.bean{display:none}}

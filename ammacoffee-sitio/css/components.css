@@ -1,0 +1,20 @@
+/* ════════════════════════════════════════
+   CAPA 3 · COMPONENTES REUTILIZABLES (botones, selectores, tarjetas, pestañas, lightbox)
+   ════════════════════════════════════════ */
+
+.btns{display:flex;gap:12px;flex-wrap:wrap}.c{justify-content:center}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font:600 .9rem 'Montserrat',sans-serif;text-decoration:none;border:2px solid #f5c76a;cursor:pointer;transition:transform .2s,box-shadow .2s;color:inherit;background:none}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(245,199,106,.4)}
+.btn.solid{background:#f5c76a;color:#3a210f}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px;margin:6px 0 16px}
+.seg button{border:0;background:none;color:var(--ink);padding:10px 20px;border-radius:999px;font:600 .85rem 'Montserrat',sans-serif;cursor:pointer;transition:.25s}
+.seg button.on{background:var(--ink);color:var(--bg)}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px}
+input[type=range]{width:100%;accent-color:var(--accent)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tabs button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:999px;padding:8px 16px;font:500 .82rem 'Montserrat',sans-serif;cursor:pointer}
+.tabs button.on{background:var(--ink);color:var(--bg)}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(15,8,3,.92);display:none;place-items:center;padding:20px;cursor:zoom-out}
+#lb.on{display:grid}#lb img{max-width:100%;max-height:100%;border-radius:12px}

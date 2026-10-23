@@ -1,0 +1,1 @@
+Opcional: si quieres usar fuentes propias (sin Google Fonts), guárdalas aquí (.woff2) y decláralas con @font-face en css/base.css.

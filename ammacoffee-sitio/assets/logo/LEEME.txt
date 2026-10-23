@@ -1,0 +1,2 @@
+Coloca aquí tu logo con el nombre exacto: logo.png (fondo transparente, ideal cuadrado de 512x512 px o más).
+Se mostrará automáticamente en la barra superior y en la portada. Mientras no exista, se ve el sello con la "M".
